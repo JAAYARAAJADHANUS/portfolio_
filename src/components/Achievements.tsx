@@ -96,7 +96,13 @@ const Achievements = () => {
     "Ms.S.Abarna",
     "Mr.Bharath",
     "Ms.T.Bhuvaneshwari",
-    "Ms.M.Sree Preethika"
+    "Ms.M.Sree Preethika",
+    "Ms.G.Swathi",
+    "Mr.M.S.Kavinkumar",
+    "Mr.J.Jeevanantham",
+    "Ms.R.Saisushmitha",
+    "Ms.M.Anu",
+    "Ms.M Priya"
   ];
 
   const studentFeedback = [
@@ -157,7 +163,17 @@ const Achievements = () => {
     { school: "Government HR.Sec.School Irugur", batches: 2, totalStudents: 55, plus1: 22, plus2: 33 },
     { school: "Government HR.Sec.School SS Kulam", batches: 3, totalStudents: 127, plus1: 74, plus2: 53 },
     { school: "Government HR.Sec.School Kulathupalayam", batches: 2, totalStudents: 103, plus1: 0, plus2: 103 },
-    { school: "Government HR.Sec.School Oththakkalmandapam", batches: 1, totalStudents: 20, plus1: 0, plus2: 20 }
+    { school: "Government HR.Sec.School Oththakkalmandapam", batches: 1, totalStudents: 20, plus1: 0, plus2: 20 },
+    { school: "Government HR.Sec.School Kuniyamuthur", batches: 2, totalStudents: 32, plus1: 0, plus2: 32 },
+    { school: "Government HR.Sec.School Chettipalayam", batches: 1, totalStudents: 64, plus1: 0, plus2: 64 },
+    { school: "Government Boys HR.Sec.School-Ondipudur", batches: 1, totalStudents: 52, plus1: 0, plus2: 52 },
+    { school: "Government Girls HR.Sec.School-Thondamuthur (Updated)", batches: 2, totalStudents: 86, plus1: 0, plus2: 86 },
+    { school: "Government Girls HR.Sec.School-Valparai", batches: 1, totalStudents: 27, plus1: 0, plus2: 27 },
+    { school: "Government HR.Sec.School Kavundampalayam", batches: 2, totalStudents: 110, plus1: 55, plus2: 55 },
+    { school: "Government HR.Sec.School Bujanganur, Mettupalayam", batches: 1, totalStudents: 50, plus1: 0, plus2: 50 },
+    { school: "Government HR.Sec.School Mettupalayam", batches: 2, totalStudents: 45, plus1: 0, plus2: 45 },
+    { school: "Government HR.Sec.School Sirumugai Pudur, Mettupalayam", batches: 1, totalStudents: 23, plus1: 0, plus2: 23 },
+    { school: "Government HR.Sec.School Valparai", batches: 1, totalStudents: 60, plus1: 0, plus2: 60 }
   ];
 
   return (
