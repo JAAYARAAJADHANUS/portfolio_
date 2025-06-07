@@ -305,8 +305,38 @@ const Achievements = () => {
             </Card>
           </div>
 
+          {/* Program Statistics */}
+          <div>
+            <h3 className="text-2xl font-bold text-center text-foreground mb-8">Program Statistics</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {programStats.map((stat, index) => (
+                <Card key={index} className="p-6 hover:shadow-lg transition-shadow bg-gradient-to-br from-primary/5 to-gsg-blue/5">
+                  <h4 className="font-bold text-foreground mb-4 text-sm leading-tight">{stat.school}</h4>
+                  <div className="space-y-2">
+                    <div className="flex justify-between items-center">
+                      <span className="text-xs text-muted-foreground">Batches:</span>
+                      <span className="font-bold text-primary">{stat.batches}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-xs text-muted-foreground">Total Students:</span>
+                      <span className="font-bold text-gsg-blue">{stat.totalStudents}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-xs text-muted-foreground">+1 Students:</span>
+                      <span className="font-semibold text-gsg-green">{stat.plus1}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-xs text-muted-foreground">+2 Students:</span>
+                      <span className="font-semibold text-gsg-orange">{stat.plus2}</span>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
 
-             {/* Registration Info */}
+        {/* Registration Info */}
         <div className="text-center">
           <Card className="inline-block p-6 bg-gradient-to-r from-primary to-gsg-blue text-white">
             <h3 className="text-xl font-bold mb-2">Officially Registered</h3>
