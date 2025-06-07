@@ -72,7 +72,13 @@ const Achievements = () => {
     "Social Awareness",
     "Self-Motivation",
     "Importance of Education",
-    "Self-Defense"
+    "Self-Defense",
+    "Women Empowerment",
+    "Self-Confidence",
+    "Self-Control",
+    "Start-up Awareness",
+    "Self-Realisation",
+    "Emotional Intelligence"
   ];
 
   const trainers = [
@@ -83,7 +89,10 @@ const Achievements = () => {
     "Mr.Jeeva",
     "Mr.S.Arun Prasanth",
     "Mr.J.Rubanraj",
-    "Ms.R.Madhumitha"
+    "Ms.R.Madhumitha",
+    "Ms.R.Dhivya Bharathi",
+    "Ms.Sree Preethika",
+    "Ms.S.Abarna"
   ];
 
   const studentFeedback = [
@@ -98,7 +107,19 @@ const Achievements = () => {
     "Need guidance for higher education",
     "Need financial support for higher education",
     "Need guidance for UPSC exams",
-    "Need support for developing soft skills"
+    "Need support for developing soft skills",
+    "Need support for personality development",
+    "Need guidance for applying Government scholarships",
+    "Need individual counseling",
+    "Need more sessions about women empowerment",
+    "Need part-time job assistance",
+    "Need guidance for Higher Studies",
+    "Need skill development classes",
+    "Need support for developing Language skills",
+    "Need guidance for banking exams",
+    "Need psychometric assessment",
+    "Need support for developing language skills",
+    "Requesting for monthly sessions"
   ];
 
   const programStats = [
@@ -109,7 +130,17 @@ const Achievements = () => {
     { school: "City Corporation HR.Sec.School Townhall", batches: 2, totalStudents: 108, plus1: 56, plus2: 52 },
     { school: "Corporation HR.Sec. Udayampalayam", batches: 2, totalStudents: 93, plus1: 49, plus2: 44 },
     { school: "Corporation HR.Sec.School Okkiliyar Street", batches: 3, totalStudents: 127, plus1: 60, plus2: 67 },
-    { school: "Corporation Boys.HR.Sec.School-RS Puram", batches: 2, totalStudents: 44, plus1: 23, plus2: 21 }
+    { school: "Corporation Boys.HR.Sec.School-RS Puram", batches: 2, totalStudents: 44, plus1: 23, plus2: 21 },
+    { school: "Corporation HR.Sec.School Vadakovai", batches: 2, totalStudents: 117, plus1: 63, plus2: 54 },
+    { school: "Corporation Girls HR.Sec.School Ramakrishnapuram", batches: 3, totalStudents: 99, plus1: 18, plus2: 81 },
+    { school: "Corporation HR.Sec.School Siddhapudur", batches: 2, totalStudents: 69, plus1: 0, plus2: 69 },
+    { school: "Kamalanadhan Memorial Corporation HR.Sec.School-Venkitapuram", batches: 2, totalStudents: 51, plus1: 0, plus2: 51 },
+    { school: "Corporation HR.Sec.School Peelamedu", batches: 2, totalStudents: 46, plus1: 0, plus2: 46 },
+    { school: "Corporation Girls.HR.Sec.School - Oppanakkara Street", batches: 4, totalStudents: 258, plus1: 0, plus2: 258 },
+    { school: "Corporation HR.Sec. Maniyakaranpalayam", batches: 2, totalStudents: 55, plus1: 35, plus2: 65 },
+    { school: "Corporation Girls.HR.Sec.School-Ranganadhapuram", batches: 4, totalStudents: 142, plus1: 52, plus2: 90 },
+    { school: "Corporation Girls. HR.Sec.School-RS Puram", batches: 1, totalStudents: 143, plus1: 0, plus2: 143 },
+    { school: "Government HR.Sec.School Kalapatti", batches: 1, totalStudents: 161, plus1: 89, plus2: 72 }
   ];
 
   return (
