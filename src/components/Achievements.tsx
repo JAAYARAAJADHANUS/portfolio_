@@ -78,7 +78,8 @@ const Achievements = () => {
     "Self-Control",
     "Start-up Awareness",
     "Self-Realisation",
-    "Emotional Intelligence"
+    "Emotional Intelligence",
+    "Career Guidance"
   ];
 
   const trainers = [
@@ -92,7 +93,10 @@ const Achievements = () => {
     "Ms.R.Madhumitha",
     "Ms.R.Dhivya Bharathi",
     "Ms.Sree Preethika",
-    "Ms.S.Abarna"
+    "Ms.S.Abarna",
+    "Mr.Bharath",
+    "Ms.T.Bhuvaneshwari",
+    "Ms.M.Sree Preethika"
   ];
 
   const studentFeedback = [
@@ -119,7 +123,10 @@ const Achievements = () => {
     "Need guidance for banking exams",
     "Need psychometric assessment",
     "Need support for developing language skills",
-    "Requesting for monthly sessions"
+    "Requesting for monthly sessions",
+    "Need more classes",
+    "Need few more sessions",
+    "Need support for developing soft skill"
   ];
 
   const programStats = [
@@ -140,7 +147,17 @@ const Achievements = () => {
     { school: "Corporation HR.Sec. Maniyakaranpalayam", batches: 2, totalStudents: 55, plus1: 35, plus2: 65 },
     { school: "Corporation Girls.HR.Sec.School-Ranganadhapuram", batches: 4, totalStudents: 142, plus1: 52, plus2: 90 },
     { school: "Corporation Girls. HR.Sec.School-RS Puram", batches: 1, totalStudents: 143, plus1: 0, plus2: 143 },
-    { school: "Government HR.Sec.School Kalapatti", batches: 1, totalStudents: 161, plus1: 89, plus2: 72 }
+    { school: "Government HR.Sec.School Kalapatti", batches: 1, totalStudents: 161, plus1: 89, plus2: 72 },
+    { school: "Shree Paldevdas Kikani Vidyamandir HR.Sec.School-CBE", batches: 4, totalStudents: 203, plus1: 101, plus2: 102 },
+    { school: "Government HR.Sec.School Sundapalayam", batches: 2, totalStudents: 51, plus1: 0, plus2: 51 },
+    { school: "Devanga HR.Sec.School RS Puram", batches: 1, totalStudents: 125, plus1: 0, plus2: 125 },
+    { school: "Government HR.Sec.School Mathvarayapuram", batches: 2, totalStudents: 56, plus1: 0, plus2: 56 },
+    { school: "Government Girls.HR.Sec.School-Thondamuthur", batches: 1, totalStudents: 71, plus1: 0, plus2: 71 },
+    { school: "Government HR.Sec.School Kannampalayam", batches: 2, totalStudents: 94, plus1: 38, plus2: 56 },
+    { school: "Government HR.Sec.School Irugur", batches: 2, totalStudents: 55, plus1: 22, plus2: 33 },
+    { school: "Government HR.Sec.School SS Kulam", batches: 3, totalStudents: 127, plus1: 74, plus2: 53 },
+    { school: "Government HR.Sec.School Kulathupalayam", batches: 2, totalStudents: 103, plus1: 0, plus2: 103 },
+    { school: "Government HR.Sec.School Oththakkalmandapam", batches: 1, totalStudents: 20, plus1: 0, plus2: 20 }
   ];
 
   return (
