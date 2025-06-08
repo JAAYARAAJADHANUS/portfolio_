@@ -1,6 +1,4 @@
 import { Card } from '@/components/ui/card';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
 
 const Programs = () => {
   const coreProjects = [
@@ -61,89 +59,44 @@ const Programs = () => {
 
         {/* Additional Programs */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Dialog>
-            <DialogTrigger asChild>
-              <Card className="p-8 bg-white cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/20">
-                <h3 className="text-xl font-bold text-foreground mb-4">Skill Development Programs</h3>
-                <p className="text-muted-foreground mb-4">
-                  Comprehensive training programs for technical and soft skills development.
-                </p>
-                <Button variant="outline" className="w-full">View Details</Button>
-              </Card>
-            </DialogTrigger>
-            <DialogContent className="max-w-md">
-              <DialogHeader>
-                <DialogTitle>Skill Development Programs</DialogTitle>
-              </DialogHeader>
-              <div className="space-y-4">
-                <p className="text-muted-foreground">
-                  Comprehensive training programs designed to enhance students' technical and soft skills for better career prospects.
-                </p>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Technical Skills Training</li>
-                  <li>• Soft Skills Development</li>
-                  <li>• Industry-Ready Curriculum</li>
-                  <li>• Hands-on Project Experience</li>
-                </ul>
-              </div>
-            </DialogContent>
-          </Dialog>
+          <Card className="p-8 bg-white">
+            <h3 className="text-xl font-bold text-foreground mb-4">Skill Development Programs</h3>
+            <p className="text-muted-foreground mb-4">
+              Comprehensive training programs designed to enhance students' technical and soft skills for better career prospects.
+            </p>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>• Technical Skills Training</li>
+              <li>• Soft Skills Development</li>
+              <li>• Industry-Ready Curriculum</li>
+              <li>• Hands-on Project Experience</li>
+            </ul>
+          </Card>
 
-          <Dialog>
-            <DialogTrigger asChild>
-              <Card className="p-8 bg-white cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/20">
-                <h3 className="text-xl font-bold text-foreground mb-4">Career Guidance</h3>
-                <p className="text-muted-foreground mb-4">
-                  Personalized career counseling and guidance for informed decisions.
-                </p>
-                <Button variant="outline" className="w-full">View Details</Button>
-              </Card>
-            </DialogTrigger>
-            <DialogContent className="max-w-md">
-              <DialogHeader>
-                <DialogTitle>Career Guidance</DialogTitle>
-              </DialogHeader>
-              <div className="space-y-4">
-                <p className="text-muted-foreground">
-                  Personalized career counseling and guidance to help students make informed decisions about their future.
-                </p>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• One-on-One Counseling</li>
-                  <li>• Career Assessment Tests</li>
-                  <li>• Industry Insights</li>
-                  <li>• Placement Assistance</li>
-                </ul>
-              </div>
-            </DialogContent>
-          </Dialog>
+          <Card className="p-8 bg-white">
+            <h3 className="text-xl font-bold text-foreground mb-4">Career Guidance</h3>
+            <p className="text-muted-foreground mb-4">
+              Personalized career counseling and guidance to help students make informed decisions about their future.
+            </p>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>• One-on-One Counseling</li>
+              <li>• Career Assessment Tests</li>
+              <li>• Industry Insights</li>
+              <li>• Placement Assistance</li>
+            </ul>
+          </Card>
 
-          <Dialog>
-            <DialogTrigger asChild>
-              <Card className="p-8 bg-white cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/20">
-                <h3 className="text-xl font-bold text-foreground mb-4">Corporate Training</h3>
-                <p className="text-muted-foreground mb-4">
-                  Specialized training for corporate partnerships and development.
-                </p>
-                <Button variant="outline" className="w-full">View Details</Button>
-              </Card>
-            </DialogTrigger>
-            <DialogContent className="max-w-md">
-              <DialogHeader>
-                <DialogTitle>Corporate Training</DialogTitle>
-              </DialogHeader>
-              <div className="space-y-4">
-                <p className="text-muted-foreground">
-                  Specialized training programs for corporate partnerships and professional development initiatives.
-                </p>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Corporate Partnerships</li>
-                  <li>• Professional Development</li>
-                  <li>• Team Building Programs</li>
-                  <li>• Leadership Training</li>
-                </ul>
-              </div>
-            </DialogContent>
-          </Dialog>
+          <Card className="p-8 bg-white">
+            <h3 className="text-xl font-bold text-foreground mb-4">Corporate Training</h3>
+            <p className="text-muted-foreground mb-4">
+              Specialized training programs for corporate partnerships and professional development initiatives.
+            </p>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>• Corporate Partnerships</li>
+              <li>• Professional Development</li>
+              <li>• Team Building Programs</li>
+              <li>• Leadership Training</li>
+            </ul>
+          </Card>
         </div>
       </div>
     </section>
