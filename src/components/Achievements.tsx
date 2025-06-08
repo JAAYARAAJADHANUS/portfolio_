@@ -102,7 +102,10 @@ const Achievements = () => {
     "Mr.J.Jeevanantham",
     "Ms.R.Saisushmitha",
     "Ms.M.Anu",
-    "Ms.M Priya"
+    "Ms.M Priya",
+    "Ms.Kalpana",
+    "Mr.P.Boobalakrishnan",
+    "Mrs.M. Priya"
   ];
 
   const studentFeedback = [
@@ -178,7 +181,17 @@ const Achievements = () => {
     { school: "Thiyagi Duraiswamy Gowder Hr.Sec.School-Seeliyur, Mettupalayam", batches: 1, totalStudents: 46, plus1: 0, plus2: 46 },
     { school: "Government Boys Hr.Sec.School-Chinna Thadagam", batches: 2, totalStudents: 74, plus1: 49, plus2: 25 },
     { school: "Psgr Krishnammal Girls.Hr.Sec.School-Ondipudur", batches: 1, totalStudents: 134, plus1: 134, plus2: 0 },
-    { school: "Kadhir Mills Hr.Sec.School-Ondipudur", batches: 1, totalStudents: 160, plus1: 0, plus2: 0, grade10: 160 }
+    { school: "Kadhir Mills Hr.Sec.School-Ondipudur", batches: 1, totalStudents: 160, plus1: 0, plus2: 0, grade10: 160 },
+    { school: "Government HR.Sec.School Vellamadai", batches: 1, totalStudents: 64, plus1: 36, plus2: 28 },
+    { school: "Government HR.Sec.School Chenniyampalayam", batches: 2, totalStudents: 108, plus1: 51, plus2: 57 },
+    { school: "Government HR.Sec.School Madhukkarai", batches: 2, totalStudents: 187, plus1: 55, plus2: 132 },
+    { school: "Municipal Boys HR.Sec.School - Pollachi", batches: 3, totalStudents: 139, plus1: 62, plus2: 77 },
+    { school: "Government HR.Sec.School Zamin Uthukuli-Pollachi", batches: 2, totalStudents: 68, plus1: 0, plus2: 68 },
+    { school: "Government Girls.HR.Sec.School-Pollachi", batches: 2, totalStudents: 117, plus1: 45, plus2: 72 },
+    { school: "Samathur Rama Iyengar Govt.HR.Sec.School- Pollachi", batches: 1, totalStudents: 58, plus1: 42, plus2: 16 },
+    { school: "Municipal Girls. HR.Sec.School-Pollachi", batches: 4, totalStudents: 142, plus1: 52, plus2: 90 },
+    { school: "ADWHSS Welspuram, Mettupalayam", batches: 1, totalStudents: 15, plus1: 0, plus2: 15 },
+    { school: "Aggarwal Matriculation HR.Sec.School-Kanuvai", batches: 1, totalStudents: 30, plus1: 0, plus2: 30 }
   ];
 
   return (
