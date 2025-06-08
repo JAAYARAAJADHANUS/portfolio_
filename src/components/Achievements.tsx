@@ -314,9 +314,13 @@ const Achievements = () => {
               </h3>
               <div className="space-y-3 max-h-64 overflow-y-auto">
                 {studentFeedback.map((feedback, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-gsg-orange rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-sm text-foreground">{feedback}</span>
+                  <div key={index} className="flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-gsg-orange/20 rounded-full flex items-center justify-center">
+                      <svg className="w-4 h-4 text-gsg-orange" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 13h-2v-2h2v2zm0-4h-2V7h2v4z"/>
+                      </svg>
+                    </div>
+                    <span className="text-sm text-foreground font-medium">{feedback}</span>
                   </div>
                 ))}
               </div>
