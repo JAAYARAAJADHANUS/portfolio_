@@ -173,7 +173,12 @@ const Achievements = () => {
     { school: "Government HR.Sec.School Bujanganur, Mettupalayam", batches: 1, totalStudents: 50, plus1: 0, plus2: 50 },
     { school: "Government HR.Sec.School Mettupalayam", batches: 2, totalStudents: 45, plus1: 0, plus2: 45 },
     { school: "Government HR.Sec.School Sirumugai Pudur, Mettupalayam", batches: 1, totalStudents: 23, plus1: 0, plus2: 23 },
-    { school: "Government HR.Sec.School Valparai", batches: 1, totalStudents: 60, plus1: 0, plus2: 60 }
+    { school: "Government HR.Sec.School Valparai", batches: 1, totalStudents: 60, plus1: 0, plus2: 60 },
+    { school: "St.Anns Metric.Hr.Sec.School-Thirumalayampalayam", batches: 1, totalStudents: 51, plus1: 0, plus2: 51 },
+    { school: "Thiyagi Duraiswamy Gowder Hr.Sec.School-Seeliyur, Mettupalayam", batches: 1, totalStudents: 46, plus1: 0, plus2: 46 },
+    { school: "Government Boys Hr.Sec.School-Chinna Thadagam", batches: 2, totalStudents: 74, plus1: 49, plus2: 25 },
+    { school: "Psgr Krishnammal Girls.Hr.Sec.School-Ondipudur", batches: 1, totalStudents: 134, plus1: 134, plus2: 0 },
+    { school: "Kadhir Mills Hr.Sec.School-Ondipudur", batches: 1, totalStudents: 160, plus1: 0, plus2: 0, grade10: 160 }
   ];
 
   return (
@@ -321,19 +326,67 @@ const Achievements = () => {
                       <span className="text-xs text-muted-foreground">Total Students:</span>
                       <span className="font-bold text-gsg-blue">{stat.totalStudents}</span>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs text-muted-foreground">+1 Students:</span>
-                      <span className="font-semibold text-gsg-green">{stat.plus1}</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs text-muted-foreground">+2 Students:</span>
-                      <span className="font-semibold text-gsg-orange">{stat.plus2}</span>
-                    </div>
+                    {stat.grade10 ? (
+                      <div className="flex justify-between items-center">
+                        <span className="text-xs text-muted-foreground">10th Students:</span>
+                        <span className="font-semibold text-gsg-green">{stat.grade10}</span>
+                      </div>
+                    ) : (
+                      <>
+                        <div className="flex justify-between items-center">
+                          <span className="text-xs text-muted-foreground">+1 Students:</span>
+                          <span className="font-semibold text-gsg-green">{stat.plus1}</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-xs text-muted-foreground">+2 Students:</span>
+                          <span className="font-semibold text-gsg-orange">{stat.plus2}</span>
+                        </div>
+                      </>
+                    )}
                   </div>
                 </Card>
               ))}
             </div>
           </div>
+        </div>
+
+        {/* Acknowledgments Section */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-center text-primary mb-12">Our Hearty Thanks To</h2>
+          <Card className="p-8 bg-gradient-to-br from-gsg-blue/5 to-primary/5 border-primary/20">
+            <div className="space-y-6 text-center">
+              <div className="space-y-2">
+                <p className="text-lg font-semibold text-foreground">Tmt.N.Shyamala,</p>
+                <p className="text-muted-foreground">Chairman, Pollachi Municipality.</p>
+              </div>
+              
+              <div className="space-y-2">
+                <p className="text-lg font-semibold text-foreground">Thiru.A.Thanumoorthy,</p>
+                <p className="text-muted-foreground">Commissioner, Pollachi Municipality.</p>
+              </div>
+              
+              <div className="space-y-2">
+                <p className="text-lg font-semibold text-foreground">Respected Headmasters and Headmistress</p>
+                <p className="text-muted-foreground">Corporation Schools,</p>
+                <p className="text-muted-foreground">Government and Government aided Schools,</p>
+                <p className="text-muted-foreground">Coimbatore District.</p>
+              </div>
+              
+              <div className="space-y-2">
+                <p className="text-lg font-semibold text-foreground">All Faculties</p>
+                <p className="text-muted-foreground">Corporation Schools,</p>
+                <p className="text-muted-foreground">Government and Government aided Schools,</p>
+                <p className="text-muted-foreground">Coimbatore District.</p>
+              </div>
+              
+              <div className="space-y-2">
+                <p className="text-lg font-semibold text-foreground">All Students</p>
+                <p className="text-muted-foreground">Corporation Schools,</p>
+                <p className="text-muted-foreground">Government and Government aided Schools,</p>
+                <p className="text-muted-foreground">Coimbatore District.</p>
+              </div>
+            </div>
+          </Card>
         </div>
 
         {/* Registration Info */}
