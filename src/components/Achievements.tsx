@@ -312,7 +312,7 @@ const Achievements = () => {
                 </svg>
                 Student Feedback
               </h3>
-              <div className="space-y-3 max-h-64 overflow-y-auto">
+              <div className="space-y-3">
                 {studentFeedback.map((feedback, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-gsg-orange/20 rounded-full flex items-center justify-center">
