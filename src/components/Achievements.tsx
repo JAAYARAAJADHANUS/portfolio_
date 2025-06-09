@@ -1,4 +1,6 @@
 import { Card } from '@/components/ui/card';
+import { motion } from 'framer-motion';
+import { Trophy, CheckCircle2, School, Users, GraduationCap, Target, Sparkles } from 'lucide-react';
 
 const Achievements = () => {
   const achievements = [
@@ -108,36 +110,6 @@ const Achievements = () => {
     "Mrs.M. Priya"
   ];
 
-  const studentFeedback = [
-    "Need time for interaction",
-    "Need guidance for Government exams",
-    "Need scholarship for higher education",
-    "Need support for developing language skill",
-    "Need more sessions",
-    "Need guidance for competitive exams",
-    "Need individual educational counseling",
-    "Need support for developing communication skills",
-    "Need guidance for higher education",
-    "Need financial support for higher education",
-    "Need guidance for UPSC exams",
-    "Need support for developing soft skills",
-    "Need support for personality development",
-    "Need guidance for applying Government scholarships",
-    "Need individual counseling",
-    "Need more sessions about women empowerment",
-    "Need part-time job assistance",
-    "Need guidance for Higher Studies",
-    "Need skill development classes",
-    "Need support for developing Language skills",
-    "Need guidance for banking exams",
-    "Need psychometric assessment",
-    "Need support for developing language skills",
-    "Requesting for monthly sessions",
-    "Need more classes",
-    "Need few more sessions",
-    "Need support for developing soft skill"
-  ];
-
   const programStats = [
     { school: "Corporation HR.Sec.School Selvapuram", batches: 3, totalStudents: 97, plus1: 38, plus2: 59 },
     { school: "Corporation HR.Sec.School Rathinapuri-CBE", batches: 1, totalStudents: 55, plus1: 0, plus2: 55 },
@@ -195,224 +167,373 @@ const Achievements = () => {
   ];
 
   return (
-    <section id="achievements" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="achievements" className="py-24 bg-gradient-to-br from-background to-background/95 relative overflow-hidden">
+      <div className="absolute inset-0 bg-grid-black/[0.02] -z-10" />
+      <div className="absolute inset-0 bg-gradient-to-br from-ebe-purple/5 via-ebe-green/5 to-ebe-magenta/5 animate-gradient" />
+      
+      <div className="container mx-auto px-4 relative">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-8">
-            ACHIEVEMENTS
+        <motion.div 
+          className="text-center max-w-3xl mx-auto mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <motion.div
+            className="flex items-center justify-center gap-2 mb-4"
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <Sparkles className="w-5 h-5 text-primary animate-pulse" />
+            <span className="bg-primary/10 text-primary px-6 py-2 rounded-full text-sm font-semibold">
+              Our Achievements
+            </span>
+          </motion.div>
+
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Milestones of{' '}
+            <span className="bg-gradient-to-r from-ebe-purple via-ebe-green to-ebe-magenta bg-clip-text text-transparent animate-gradient">
+              Excellence
+            </span>
           </h2>
           
           {/* Achievement Icon */}
-          <div className="relative inline-block mb-8">
-            <div className="w-32 h-32 mx-auto bg-gradient-to-br from-primary to-gsg-blue rounded-full flex items-center justify-center">
-              <svg className="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-              </svg>
+          <motion.div 
+            className="relative inline-block my-10"
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            <div className="w-32 h-32 mx-auto bg-gradient-to-br from-ebe-purple via-ebe-green to-ebe-magenta rounded-full flex items-center justify-center shadow-xl">
+              <Trophy className="w-16 h-16 text-white" />
             </div>
-            <div className="absolute -top-4 -right-4 w-16 h-16 bg-gsg-orange rounded-full flex items-center justify-center">
-              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
-              </svg>
+            <div className="absolute -top-4 -right-4 w-16 h-16 bg-white/80 dark:bg-white/10 rounded-full flex items-center justify-center shadow-lg">
+              <CheckCircle2 className="w-8 h-8 text-primary" />
             </div>
-          </div>
-        </div>
+          </motion.div>
+
+          <p className="text-xl text-muted-foreground">
+            Transforming education and empowering students across Tamil Nadu through innovative programs and dedicated mentorship.
+          </p>
+        </motion.div>
 
         {/* Achievements List */}
-        <div className="grid lg:grid-cols-2 gap-12 items-start mb-20">
-          <div>
-            <h3 className="text-2xl font-bold text-foreground mb-8">Our Key Achievements</h3>
-            <div className="space-y-6">
-              {achievements.map((achievement, index) => (
-                <Card key={index} className="p-6 hover:shadow-lg transition-shadow border-l-4 border-l-primary">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
-                      </svg>
-                    </div>
-                    <p className="text-muted-foreground leading-relaxed">{achievement}</p>
+        <div className="grid lg:grid-cols-2 gap-12 items-start mb-24">
+          {/* Key Achievements */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="h-[600px]"
+          >
+            <Card className="p-8 bg-gradient-to-br from-ebe-purple/5 to-transparent border-2 hover:shadow-2xl transition-all duration-300 h-full relative">
+              <div className="flex flex-col h-full">
+                <div className="flex items-center justify-between mb-8 sticky top-0 bg-background/80 backdrop-blur-sm z-10 -mx-8 px-8 py-2">
+                  <h3 className="text-2xl font-bold text-foreground flex items-center">
+                    <Trophy className="w-8 h-8 text-primary mr-4" />
+                    Key Achievements
+                  </h3>
+                  <span className="px-4 py-1 bg-primary/10 text-primary text-sm rounded-full">
+                    {achievements.length} Milestones
+                  </span>
+                </div>
+                
+                <div className="overflow-y-auto pr-2 -mr-2 scrollbar-thin scrollbar-thumb-primary/20 hover:scrollbar-thumb-primary/40 scrollbar-track-transparent">
+                  <div className="space-y-4 pb-4">
+                    {achievements.map((achievement, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.05 }}
+                      >
+                        <div className="flex items-start p-4 bg-white/50 dark:bg-white/5 backdrop-blur-sm rounded-lg hover:shadow-md transition-all group hover:bg-ebe-purple/5 border border-transparent hover:border-primary/20">
+                          <div className="w-2 h-full bg-gradient-to-br from-ebe-purple to-ebe-green rounded-full mr-4 group-hover:scale-y-110 transition-transform"></div>
+                          <p className="text-foreground text-lg leading-relaxed">{achievement}</p>
+                        </div>
+                      </motion.div>
+                    ))}
                   </div>
-                </Card>
-              ))}
-            </div>
-          </div>
-
-          {/* Schools Network */}
-          <div>
-            <h3 className="text-2xl font-bold text-foreground mb-8">Our Achieved Schools</h3>
-            <Card className="p-6 bg-primary/5 border-primary/20">
-              <div className="max-h-96 overflow-y-auto space-y-3">
-                {schoolsList.map((school, index) => (
-                  <div key={index} className="flex items-center space-x-3 p-3 bg-white rounded-lg shadow-sm">
-                    <div className="w-3 h-3 bg-primary rounded-full flex-shrink-0"></div>
-                    <span className="text-sm text-foreground font-medium">{school}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-4 text-center">
-                <span className="text-sm text-muted-foreground">
-                  and many more schools across Tamil Nadu...
-                </span>
+                </div>
               </div>
             </Card>
-          </div>
+          </motion.div>
+
+          {/* Schools Network */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="h-[600px]"
+          >
+            <Card className="p-8 bg-gradient-to-br from-ebe-green/5 to-transparent border-2 hover:shadow-2xl transition-all duration-300 h-full relative">
+              <div className="flex flex-col h-full">
+                <div className="flex items-center justify-between mb-8 sticky top-0 bg-background/80 backdrop-blur-sm z-10 -mx-8 px-8 py-2">
+                  <h3 className="text-2xl font-bold text-foreground flex items-center">
+                    <School className="w-8 h-8 text-primary mr-4" />
+                    Partner Schools
+                  </h3>
+                  <span className="px-4 py-1 bg-primary/10 text-primary text-sm rounded-full">
+                    {schoolsList.length} Schools
+                  </span>
+                </div>
+
+                <div className="overflow-y-auto pr-2 -mr-2 scrollbar-thin scrollbar-thumb-primary/20 hover:scrollbar-thumb-primary/40 scrollbar-track-transparent">
+                  <div className="space-y-3 pb-4">
+                    {schoolsList.map((school, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: 10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.05 }}
+                      >
+                        <div className="flex items-center p-4 bg-white/50 dark:bg-white/5 backdrop-blur-sm rounded-lg hover:shadow-md transition-all group hover:bg-ebe-green/5 border border-transparent hover:border-primary/20">
+                          <div className="w-2 h-8 bg-gradient-to-br from-ebe-green to-ebe-magenta rounded-full mr-4 group-hover:scale-y-110 transition-transform"></div>
+                          <span className="text-foreground font-medium">{school}</span>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </motion.div>
         </div>
 
         {/* Program Details Section */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-center text-primary mb-12">Program Details</h2>
+        <div className="mb-24">
+          <motion.h2 
+            className="text-4xl font-bold text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            Program{' '}
+            <span className="bg-gradient-to-r from-ebe-purple via-ebe-green to-ebe-magenta bg-clip-text text-transparent">
+              Details
+            </span>
+          </motion.h2>
           
-          <div className="grid lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid lg:grid-cols-2 gap-8 mb-16">
             {/* Topics Covered */}
-            <Card className="p-6 bg-gsg-blue/5 border-gsg-blue/20">
-              <h3 className="text-xl font-bold text-foreground mb-6 flex items-center">
-                <svg className="w-6 h-6 text-gsg-blue mr-3" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
-                </svg>
-                Topics Covered
-              </h3>
-              <div className="space-y-3">
-                {topicsCovered.map((topic, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-gsg-blue rounded-full"></div>
-                    <span className="text-sm text-foreground">{topic}</span>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="h-[600px]"
+            >
+              <Card className="p-8 bg-gradient-to-br from-ebe-purple/5 to-transparent border-2 hover:shadow-2xl transition-all duration-300 h-full relative">
+                <div className="flex flex-col h-full">
+                  <div className="flex items-center justify-between mb-8 sticky top-0 bg-background/80 backdrop-blur-sm z-10 -mx-8 px-8 py-2">
+                    <h3 className="text-2xl font-bold text-foreground flex items-center">
+                      <Target className="w-8 h-8 text-primary mr-4" />
+                      Topics Covered
+                    </h3>
+                    <span className="px-4 py-1 bg-primary/10 text-primary text-sm rounded-full">
+                      {topicsCovered.length} Topics
+                    </span>
                   </div>
-                ))}
-              </div>
-            </Card>
+                  
+                  <div className="overflow-y-auto pr-2 -mr-2 scrollbar-thin scrollbar-thumb-primary/20 hover:scrollbar-thumb-primary/40 scrollbar-track-transparent">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pb-4">
+                      {topicsCovered.map((topic, index) => (
+                        <motion.div
+                          key={index}
+                          initial={{ opacity: 0, x: -10 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: index * 0.05 }}
+                        >
+                          <div className="flex items-center p-4 bg-white/50 dark:bg-white/5 backdrop-blur-sm rounded-lg hover:shadow-md transition-all group hover:bg-ebe-purple/5 border border-transparent hover:border-primary/20">
+                            <div className="w-2 h-8 bg-gradient-to-br from-ebe-purple to-ebe-green rounded-full mr-4 group-hover:scale-y-110 transition-transform"></div>
+                            <span className="text-foreground font-medium">{topic}</span>
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </motion.div>
 
             {/* Trainers */}
-            <Card className="p-6 bg-gsg-green/5 border-gsg-green/20">
-              <h3 className="text-xl font-bold text-foreground mb-6 flex items-center">
-                <svg className="w-6 h-6 text-gsg-green mr-3" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 7H16c-.8 0-1.54.37-2 1l-3 4v2h2l2.54-3.4L18.5 16H16v6h4zM12.5 11.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5S11 9.17 11 10s.67 1.5 1.5 1.5zM5.5 6c1.11 0 2-.89 2-2s-.89-2-2-2-2 .89-2 2 .89 2 2 2zm2 16v-7H9v-2c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v2h1.5v7h3z"/>
-                </svg>
-                Our Trainers
-              </h3>
-              <div className="space-y-3">
-                {trainers.map((trainer, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-gsg-green/20 rounded-full flex items-center justify-center">
-                      <svg className="w-4 h-4 text-gsg-green" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                      </svg>
-                    </div>
-                    <span className="text-sm text-foreground font-medium">{trainer}</span>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="h-[600px]"
+            >
+              <Card className="p-8 bg-gradient-to-br from-ebe-green/5 to-transparent border-2 hover:shadow-2xl transition-all duration-300 h-full relative">
+                <div className="flex flex-col h-full">
+                  <div className="flex items-center justify-between mb-8 sticky top-0 bg-background/80 backdrop-blur-sm z-10 -mx-8 px-8 py-2">
+                    <h3 className="text-2xl font-bold text-foreground flex items-center">
+                      <Users className="w-8 h-8 text-primary mr-4" />
+                      Expert Trainers
+                    </h3>
+                    <span className="px-4 py-1 bg-primary/10 text-primary text-sm rounded-full">
+                      {trainers.length} Trainers
+                    </span>
                   </div>
-                ))}
-              </div>
-            </Card>
 
-            {/* Student Feedback */}
-            <Card className="p-6 bg-gsg-orange/5 border-gsg-orange/20">
-              <h3 className="text-xl font-bold text-foreground mb-6 flex items-center">
-                <svg className="w-6 h-6 text-gsg-orange mr-3" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 13h-2v-2h2v2zm0-4h-2V7h2v4z"/>
-                </svg>
-                Student Feedback
-              </h3>
-              <div className="space-y-3">
-                {studentFeedback.map((feedback, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-gsg-orange/20 rounded-full flex items-center justify-center">
-                      <svg className="w-4 h-4 text-gsg-orange" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 13h-2v-2h2v2zm0-4h-2V7h2v4z"/>
-                      </svg>
+                  <div className="overflow-y-auto pr-2 -mr-2 scrollbar-thin scrollbar-thumb-primary/20 hover:scrollbar-thumb-primary/40 scrollbar-track-transparent">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pb-4">
+                      {trainers.map((trainer, index) => (
+                        <motion.div
+                          key={index}
+                          initial={{ opacity: 0, x: 10 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: index * 0.05 }}
+                        >
+                          <div className="flex items-center p-4 bg-white/50 dark:bg-white/5 backdrop-blur-sm rounded-lg hover:shadow-md transition-all group hover:bg-ebe-green/5 border border-transparent hover:border-primary/20">
+                            <div className="w-8 h-8 bg-gradient-to-br from-ebe-green to-ebe-magenta rounded-full flex items-center justify-center flex-shrink-0 mr-3 group-hover:scale-110 transition-transform">
+                              <span className="text-white font-semibold text-sm">
+                                {trainer.split(' ').map(word => word[0]).join('')}
+                              </span>
+                            </div>
+                            <span className="text-foreground font-medium line-clamp-1">{trainer}</span>
+                          </div>
+                        </motion.div>
+                      ))}
                     </div>
-                    <span className="text-sm text-foreground font-medium">{feedback}</span>
                   </div>
-                ))}
-              </div>
-            </Card>
+                </div>
+              </Card>
+            </motion.div>
           </div>
 
           {/* Program Statistics */}
           <div>
-            <h3 className="text-2xl font-bold text-center text-foreground mb-8">Program Statistics</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {programStats.map((stat, index) => (
-                <Card key={index} className="p-6 hover:shadow-lg transition-shadow bg-gradient-to-br from-primary/5 to-gsg-blue/5">
-                  <h4 className="font-bold text-foreground mb-4 text-sm leading-tight">{stat.school}</h4>
-                  <div className="space-y-2">
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs text-muted-foreground">Batches:</span>
-                      <span className="font-bold text-primary">{stat.batches}</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs text-muted-foreground">Total Students:</span>
-                      <span className="font-bold text-gsg-blue">{stat.totalStudents}</span>
-                    </div>
-                    {stat.grade10 ? (
-                      <div className="flex justify-between items-center">
-                        <span className="text-xs text-muted-foreground">10th Students:</span>
-                        <span className="font-semibold text-gsg-green">{stat.grade10}</span>
-                      </div>
-                    ) : (
-                      <>
-                        <div className="flex justify-between items-center">
-                          <span className="text-xs text-muted-foreground">+1 Students:</span>
-                          <span className="font-semibold text-gsg-green">{stat.plus1}</span>
-                        </div>
-                        <div className="flex justify-between items-center">
-                          <span className="text-xs text-muted-foreground">+2 Students:</span>
-                          <span className="font-semibold text-gsg-orange">{stat.plus2}</span>
-                        </div>
-                      </>
-                    )}
-                  </div>
+            <motion.h3 
+              className="text-3xl font-bold text-center mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              Program{' '}
+              <span className="bg-gradient-to-r from-ebe-purple via-ebe-green to-ebe-magenta bg-clip-text text-transparent">
+                Statistics
+              </span>
+            </motion.h3>
+            
+            {/* Total Statistics Summary */}
+            <div className="grid grid-cols-3 gap-8 mb-12">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                <Card className="p-8 bg-gradient-to-br from-ebe-purple/10 to-transparent border-2 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                  <h4 className="text-xl font-bold text-center text-foreground mb-4">Total Schools</h4>
+                  <p className="text-4xl font-bold text-center bg-gradient-to-r from-ebe-purple to-ebe-green bg-clip-text text-transparent">
+                    {programStats.length}
+                  </p>
                 </Card>
-              ))}
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+              >
+                <Card className="p-8 bg-gradient-to-br from-ebe-green/10 to-transparent border-2 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                  <h4 className="text-xl font-bold text-center text-foreground mb-4">Total Batches</h4>
+                  <p className="text-4xl font-bold text-center bg-gradient-to-r from-ebe-green to-ebe-magenta bg-clip-text text-transparent">
+                    {programStats.reduce((sum, stat) => sum + stat.batches, 0)}
+                  </p>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+              >
+                <Card className="p-8 bg-gradient-to-br from-ebe-magenta/10 to-transparent border-2 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                  <h4 className="text-xl font-bold text-center text-foreground mb-4">Total Students</h4>
+                  <p className="text-4xl font-bold text-center bg-gradient-to-r from-ebe-magenta to-ebe-purple bg-clip-text text-transparent">
+                    {programStats.reduce((sum, stat) => sum + stat.totalStudents, 0)}
+                  </p>
+                </Card>
+              </motion.div>
+            </div>
+
+            {/* Scrollable Stats Container */}
+            <div className="relative">
+              {/* Left Shadow Overlay */}
+              <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+              
+              {/* Right Shadow Overlay */}
+              <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+              
+              {/* Scroll Container */}
+              <div className="overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-primary/20 hover:scrollbar-thumb-primary/40 scrollbar-track-transparent">
+                <div className="inline-flex gap-4 px-4 min-w-full">
+                  {programStats.map((stat, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.05 }}
+                      className="w-[300px] flex-shrink-0"
+                    >
+                      <Card className="p-6 group hover:shadow-xl transition-all duration-300 bg-gradient-to-br hover:from-ebe-purple/5 hover:to-transparent border-2 hover:border-primary/20">
+                        <h4 className="font-bold text-foreground mb-4 text-sm leading-tight group-hover:text-primary transition-colors line-clamp-2">{stat.school}</h4>
+                        <div className="space-y-3">
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm text-muted-foreground">Batches:</span>
+                            <span className="font-bold text-primary">{stat.batches}</span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm text-muted-foreground">Total Students:</span>
+                            <span className="font-bold text-ebe-purple">{stat.totalStudents}</span>
+                          </div>
+                          {stat.grade10 ? (
+                            <div className="flex justify-between items-center">
+                              <span className="text-sm text-muted-foreground">10th Students:</span>
+                              <span className="font-bold text-ebe-green">{stat.grade10}</span>
+                            </div>
+                          ) : (
+                            <>
+                              <div className="flex justify-between items-center">
+                                <span className="text-sm text-muted-foreground">+1 Students:</span>
+                                <span className="font-bold text-ebe-green">{stat.plus1}</span>
+                              </div>
+                              <div className="flex justify-between items-center">
+                                <span className="text-sm text-muted-foreground">+2 Students:</span>
+                                <span className="font-bold text-ebe-magenta">{stat.plus2}</span>
+                              </div>
+                            </>
+                          )}
+                        </div>
+                      </Card>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Acknowledgments Section */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-center text-primary mb-12">Our Hearty Thanks To</h2>
-          <Card className="p-8 bg-gradient-to-br from-gsg-blue/5 to-primary/5 border-primary/20">
-            <div className="space-y-6 text-center">
-              <div className="space-y-2">
-                <p className="text-lg font-semibold text-foreground">Tmt.N.Shyamala,</p>
-                <p className="text-muted-foreground">Chairman, Pollachi Municipality.</p>
-              </div>
-              
-              <div className="space-y-2">
-                <p className="text-lg font-semibold text-foreground">Thiru.A.Thanumoorthy,</p>
-                <p className="text-muted-foreground">Commissioner, Pollachi Municipality.</p>
-              </div>
-              
-              <div className="space-y-2">
-                <p className="text-lg font-semibold text-foreground">Respected Headmasters and Headmistress</p>
-                <p className="text-muted-foreground">Corporation Schools,</p>
-                <p className="text-muted-foreground">Government and Government aided Schools,</p>
-                <p className="text-muted-foreground">Coimbatore District.</p>
-              </div>
-              
-              <div className="space-y-2">
-                <p className="text-lg font-semibold text-foreground">All Faculties</p>
-                <p className="text-muted-foreground">Corporation Schools,</p>
-                <p className="text-muted-foreground">Government and Government aided Schools,</p>
-                <p className="text-muted-foreground">Coimbatore District.</p>
-              </div>
-              
-              <div className="space-y-2">
-                <p className="text-lg font-semibold text-foreground">All Students</p>
-                <p className="text-muted-foreground">Corporation Schools,</p>
-                <p className="text-muted-foreground">Government and Government aided Schools,</p>
-                <p className="text-muted-foreground">Coimbatore District.</p>
-              </div>
-            </div>
-          </Card>
-        </div>
-
         {/* Registration Info */}
-        <div className="text-center">
-          <Card className="inline-block p-6 bg-gradient-to-r from-primary to-gsg-blue text-white">
-            <h3 className="text-xl font-bold mb-2">Officially Registered</h3>
-            <p className="text-lg">Reg.U/S 80G of I.T. Act 1961</p>
+        <motion.div 
+          className="text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <Card className="inline-block p-8 bg-gradient-to-r from-ebe-purple via-ebe-green to-ebe-magenta text-white hover:shadow-2xl transition-all duration-300 hover:scale-105">
+            <h3 className="text-2xl font-bold mb-2">Officially Registered</h3>
+            <p className="text-lg opacity-90">Reg.U/S 80G of I.T. Act 1961</p>
           </Card>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
